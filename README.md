@@ -1,3 +1,4 @@
+# A Project Report for this Breast Ultrasound CNN
 Project created in full by Fredrick Farouk over the course of a month.
 
 ---
@@ -21,7 +22,7 @@ https://doi.org/10.1038/s41467-021-26023-2
 ## Differences from the Paper
 
 Some things I implemented differently to the paper were:
-- finding one hyperparameter at a time, as opposed to using random guesses,  
+- finding one hyperparameter at a time, as opposed to using random guesses (I described training my hyperparameters more in detail in hyperparameter_optimisation_logs.txt),  
 - forcing the model to rely on just one image, as no (open-source) dataset allowed me to implement an attention mechanism,  
 - using an 4:0:1 ratio for training:evaluation:validation as opposed to the paper's 6:3:1, and  
 - using a much smaller dataset.  
