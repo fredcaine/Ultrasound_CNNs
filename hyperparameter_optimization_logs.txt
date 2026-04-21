@@ -1,0 +1,34 @@
+Note that the number of epochs varies for the following values.
+The training loop was stopped when the validation check's lowest point when it appeared to stagnate.
+Note also the values noted below are with Cross-Entropy loss on the *validation* set, not the training set.
+This is done to avoid overfitting to the training set, although that didn't seem to be an issue, likely due to the augmentation.
+
+For a logarithmic search as explained in the paper, we now check values of beta and look for optimum values.
+These were run with the top_t% pooling fixed at 0.2, and learning rate fixed at 1e-4.
+Beta = 1: value at 0.8640 with 11 epochs.
+Beta = 1e-1: value at 0.6777 with 23 epochs.
+Beta = 1e-2: value at 0.7587 with 10 epochs.
+Beta = 1e-3: value at 0.6399 with 18 epochs.
+Beta = 5e-4: value at 0.6568 with 25 epochs.
+Beta = 1e-4: value at 0.6442 with 33 epochs.
+Beta = 1e-5: value at 0.6857 with 19 epochs.
+
+We take beta = 1e-3 from this as the best model.
+
+We now run a linear search for the top_t%, given beta = 1e-3. Learning rate is still fixed at 1e-4.
+t = 0.1: value at 0.6971 with 18 epochs.
+t = 0.2: value at 0.6399 with 18 epochs.
+t = 0.25: value at 0.6627 with 31 epochs.
+t = 0.3: value at 0.6419 with 17 epochs.
+
+We choose t = 0.2 as the best model.
+
+We now run a logarithmic search for the best learning rate.
+lr = 1e-5.5: value at 0.6957 with 78 epochs.
+lr = 1e-5: value at 0.6772 with 67 epochs.
+lr = 1e-4.5: value at 0.6679 with 100 epochs.
+lr = 1e-4: value at 0.6399 with 18 epochs.
+lr = 1e-3.5: value at 0.6324 with 74 epochs.
+
+Thus, we find the best model to have a learning rate of 1e-3.5, a top_t of 0.2, and a beta value of 1e-3.
+A total of 560 epochs were calculated, with roughly 12 hours of training time on a personal computer CPU (i7-1355U).
