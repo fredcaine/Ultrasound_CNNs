@@ -1,6 +1,7 @@
 # Fredrick Farouk. evaluation_BUS-BUSI.py
 # This is similiar to the other evaluation file, but using the same dataset as training (linked in saliency_training.py).
 # I talked more about this in README.md.
+
 import torch
 import torch.nn as nn
 from torchvision import transforms, models
