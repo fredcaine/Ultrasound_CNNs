@@ -1,12 +1,12 @@
 # Fredrick Farouk. evaluation_BUS-BUSI.py
 # This is similiar to the other evaluation file, but using the same dataset as training (linked in saliency_training.py).
 # I talked more about this in README.md.
-
 import torch
 import torch.nn as nn
 from torchvision import transforms, models
 from PIL import Image
 import os
+from sklearn.metrics import roc_auc_score
 
 # This is the valuation transform, not the training transform, as there is no reason to augment the evaluation files.
 transform = transforms.Compose([
@@ -65,6 +65,8 @@ base_dir = "Images"
 # We define key variables.
 correct = 0
 total = 0
+all_preds = []
+all_labels = []
 
 # Going through the folder's architecture, first into the correct subdirectory.
 for label_idx, folder in enumerate(["normal", "benign", "malignant"]):
@@ -84,6 +86,10 @@ for label_idx, folder in enumerate(["normal", "benign", "malignant"]):
             h, A = model(img)
             y_pred = aggregate_saliency(A)
 
+        probs = torch.softmax(y_pred, dim=1).squeeze(0).cpu().numpy()
+        all_preds.append(probs)
+        all_labels.append(label_idx)
+
         # We find the most likely prediction.
         pred = torch.argmax(y_pred, dim=1).item()
 
@@ -95,5 +101,13 @@ for label_idx, folder in enumerate(["normal", "benign", "malignant"]):
 accuracy = correct / total
 print(f"Accuracy: {round(100 * accuracy, 2)}%.")
 
-# Output: Accuracy: 92.05%.
-# Not bad.
+auroc = roc_auc_score(all_labels, all_preds, multi_class="ovr")
+print(f"AUROC: {round(auroc, 4)}")
+
+# Output:
+# Accuracy: 92.05%
+# AUROC: 0.972
+# Pretty good.
+
+
+
