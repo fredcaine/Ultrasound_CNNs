@@ -105,10 +105,8 @@ print(f"Accuracy: {round(100 * accuracy, 2)}%.")
 auroc = roc_auc_score(all_labels, all_preds, multi_class="ovr")
 print(f"AUROC: {round(auroc, 4)}")
 
-# Output:
+# This is the output:
 # Accuracy: 92.05%
 # AUROC: 0.972
+
 # Pretty good.
-
-
-
