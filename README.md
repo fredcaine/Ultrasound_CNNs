@@ -1,5 +1,7 @@
 # A Project Report for this Breast Ultrasound CNN
+
 Project created in full by Fredrick Farouk over the course of a month.
+**THIS REPOSITORY IS NOT FOR CLINICAL USE**
 
 ---
 
