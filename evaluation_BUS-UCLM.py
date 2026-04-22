@@ -1,6 +1,7 @@
-# Fredrick Farouk. evaluation.py
-# This file runs the model's forward pass on every image in the dataset to evaluate its accuracy.
+# Fredrick Farouk. evaluation_BUS-UCLM.py
+# This file runs the model's forward pass on every image in the BUS-UCLM dataset to evaluate its accuracy.
 # There will be no comments on lines that are identical to lines in other files.
+
 import torch
 import torch.nn as nn
 from torchvision import transforms, models
