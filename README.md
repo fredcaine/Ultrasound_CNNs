@@ -29,7 +29,7 @@ Some things I implemented differently to the paper were:
 - using an 4:0:1 ratio for training:evaluation:validation as opposed to the paper's 6:3:1, and  
 - using a much smaller dataset.
 
-***For more detail on the exact details of training and evaluating, as well as the structure of the model, see the flowcharts in Overall Structure of System.svg***
+***For more detail on the exact details of training and evaluating, as well as the structure of the model, see the flowcharts in Figure Set/Model Flowchart.svg***
 
 ---
 
@@ -56,7 +56,7 @@ My only available option that wasn't marked is the training dataset itself. Alth
 
 This led to an accuracy of **92.05%**, with an AUROC of **0.972**
 
-***For a more detailed analysis of the model's saliency mapping, see Saliency Map Examples.png***
+***For a more detailed analysis of the model's saliency mapping, see Figure Set/Saliency Map Examples.png***
 
 ---
 
