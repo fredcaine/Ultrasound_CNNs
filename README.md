@@ -53,7 +53,9 @@ This is likely the biggest issue:
 
 ## Additional Evaluation
 
-My only available option that wasn't marked is the training dataset itself. Although some contamination may be present, it is not substantial as training *augments* the image aggressively while evaluating does not.  
+My only available option that wasn't marked is the training dataset itself. Although some contamination may be present, it is not substantial as training *augments* the image aggressively while evaluating does not.
+
+**Results in the Figure Set were based off this evaluation.**
 
 This led to an accuracy of **92.05%**, with an AUROC of **0.972**
 
