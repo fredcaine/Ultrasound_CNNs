@@ -6,6 +6,7 @@ Project created in full by Fredrick Farouk over the course of a month.
 ---
 
 This was one of the few projects where learning and understanding the theory took significantly longer than the actual writeup of the code. I developed a pretty strong understanding of convolutional neural networks, common practices to train deep learning models, and PyTorch.
+I also learned to create figure sets for my work, as is displayed in `Figure Set/`.
 
 ---
 
@@ -29,7 +30,7 @@ Some things I implemented differently to the paper were:
 - using an 4:0:1 ratio for training:evaluation:validation as opposed to the paper's 6:3:1, and  
 - using a much smaller dataset.
 
-***For more detail on the exact details of training and evaluating, as well as the structure of the model, see the flowcharts in Figure Set/Model Flowchart.svg***
+***For more detail on the exact details of training and evaluating, as well as the structure of the model, see the flowcharts in `Figure Set/Model Flowchart.svg`***
 
 ---
 
@@ -56,7 +57,8 @@ My only available option that wasn't marked is the training dataset itself. Alth
 
 This led to an accuracy of **92.05%**, with an AUROC of **0.972**
 
-***For a more detailed analysis of the model's saliency mapping, see Figure Set/Saliency Map Examples.png***
+***For a more detailed analysis of the model's saliency mapping, see `Figure Set/Saliency Map Examples.png`***
+***For more detail on the AUROC values, see `Figure Set/ROC Curve.svg`***
 
 ---
 
