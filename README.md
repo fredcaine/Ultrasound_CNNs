@@ -5,7 +5,7 @@ Project created in full by Fredrick Farouk over the course of a month.
 
 ---
 
-This was one of the few projects where learning and understanding the theory took significantly longer than the actual writeup of the code. I developed a pretty strong understanding of convolutional neural networks, common practices to train deep learning models, and PyTorch.
+This was one of the few projects where learning and understanding the theory took significantly longer than the actual writeup of the code. I developed a better understanding of convolutional neural networks, common practices to train deep learning models, and PyTorch.
 I also learned to create figure sets for my work, as is displayed in `Figure Set/`.
 
 ---
