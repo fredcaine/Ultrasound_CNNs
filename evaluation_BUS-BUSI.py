@@ -4,9 +4,9 @@ import numpy as np
 from torchvision import transforms, models
 from PIL import Image
 import os
-import matplotlib.pyplot as plt
 from sklearn.metrics import roc_auc_score, roc_curve, auc
 from sklearn.preprocessing import label_binarize
+import matplotlib.pyplot as plt
 from matplotlib.widgets import Button
 
 # This is the valuation transform, not the training transform, as there is no reason to augment the evaluation files.
