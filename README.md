@@ -27,13 +27,15 @@ Some things I implemented differently to the paper were:
 - finding one hyperparameter at a time, as opposed to using random guesses (I described training my hyperparameters more in detail in hyperparameter_optimisation_logs.txt),  
 - forcing the model to rely on just one image, as no (open-source) dataset allowed me to implement an attention mechanism,  
 - using an 4:0:1 ratio for training:evaluation:validation as opposed to the paper's 6:3:1, and  
-- using a much smaller dataset.  
+- using a much smaller dataset.
+
+***For more detail on the exact details of training and evaluating, as well as the structure of the model, see the flowcharts in Overall Structure of System.svg***
 
 ---
 
 ## Results
 
-In the end, the model achieved a **59.15% accuracy** and an **AUROC of 0.7404** on the BUS-UCLM dataset. These results can be explained in a few ways:
+In the end, the model achieved a **59.15%** accuracy and an AUROC of **0.7404** on the BUS-UCLM dataset. These results can be explained in a few ways:
 
 Firstly, the dataset simply isn't large enough to support such a complex task.  
 
@@ -52,7 +54,9 @@ This is likely the biggest issue:
 
 My only available option that wasn't marked is the training dataset itself. Although some contamination may be present, it is not substantial as training *augments* the image aggressively while evaluating does not.  
 
-This led to an accuracy of **92.05%**.
+This led to an accuracy of **92.05%**, with an AUROC of **0.972**
+
+***For a more detailed analysis of the model's saliency mapping, see Saliency Map Examples.png***
 
 ---
 
