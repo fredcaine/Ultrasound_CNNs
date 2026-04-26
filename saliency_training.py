@@ -104,7 +104,7 @@ class SaliencyModel(nn.Module):
         # We now remove global average pooling (avgpool) and the fully connected layer (fc)
         # The reasoning is as follows: for avgpool, we do not want to collapse the map into 1x1, as many, many details are related to spatial context.
         # For fc, it, at the moment, produces the 1 000 pretrained classes of the original ResNet18, which are completely useless to the task at hand.
-        # Otherwise, this is the standard sequencing for CNNs; convolution, batch normalization, ReLU activation, max pooling, then a few layers.
+        # Otherwise, this is the standard sequencing for CNNs; convolution, batch normalization, ReLU activation, max pooling, then a few residual blocks.
         self.features = nn.Sequential(
             backbone.conv1,
             backbone.bn1,
