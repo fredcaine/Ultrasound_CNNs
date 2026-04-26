@@ -1,3 +1,8 @@
+# evaluation_BUS-BUSI.py. Fredrick Farouk
+# This evaluates the model on the BUS-BUSI dataset.
+# Note that, as mentioned in the README, some contamination may be present here.
+# Although the augmentation accounts for some of it, the scores are higher than expected implying that this likely inflates the scores.
+
 import torch
 import torch.nn as nn
 import numpy as np
